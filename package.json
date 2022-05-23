@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "This is the description of the plugin.",
   "strapi": {
-    "name": "Github Projects",
+    "name": "github-projects",
     "description": "A Strapi plugin that allows to generate projects from Github repos",
     "kind": "plugin"
   },
