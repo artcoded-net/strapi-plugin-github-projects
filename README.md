@@ -21,3 +21,11 @@ The generated API key must then be set up for your Strapi app as an environment 
 ## Submit issues
 
 Click [here](https://github.com/artcoded-net/strapi-plugin-github-projects/issues/new) to submit an issue
+
+## About us
+
+Artcoded is a developer & content creator brand, author of the Complete Strapi Course (to be soon released) and of free tutorials on Strapi (& more) on [YouTube](https://www.youtube.com/c/ArtcodedNet) and on [Artcoded.net](https://artcoded.net)
+
+## Disclaimer
+
+We are not endorsed or affiliate in any way with Strapi nor with Github. The names and/or logos of such third-parties are or may be used just to describe the functionality of this plugin.

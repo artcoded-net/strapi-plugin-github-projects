@@ -1,10 +1,10 @@
 {
   "name": "@artcoded/strapi-plugin-github-projects",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "This is the description of the plugin.",
   "strapi": {
     "name": "github-projects",
-    "description": "A Strapi plugin that allows to generate projects from Github repos",
+    "description": "A Strapi 4 plugin that allows to generate projects from Github repos",
     "kind": "plugin"
   },
   "dependencies": {
@@ -15,11 +15,13 @@
     "@strapi/strapi": "*"
   },
   "author": {
-    "name": "A Strapi developer"
+    "name": "Artcoded",
+    "email": "info@artcoded.net",
+    "url": "https://artcoded.net"
   },
   "maintainers": [
     {
-      "name": "A Strapi developer"
+      "name": "Artcoded"
     }
   ],
   "engines": {
