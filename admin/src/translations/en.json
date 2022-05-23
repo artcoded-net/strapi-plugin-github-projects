@@ -1,0 +1,7 @@
+{
+  "plugin.name": "Github Projects",
+  "repo.name": "Name",
+  "repo.description": "Description",
+  "repo.url": "Url",
+  "repo.actions": "Actions"
+}
