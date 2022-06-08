@@ -5,9 +5,7 @@
 import axios from "axios";
 import { auth } from "@strapi/helper-plugin";
 
-const instance = axios.create({
-  baseURL: process.env.STRAPI_ADMIN_BACKEND_URL,
-});
+const instance = axios.create();
 
 instance.interceptors.request.use(
   async (config) => {
