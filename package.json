@@ -1,6 +1,6 @@
 {
   "name": "@artcoded/strapi-plugin-github-projects",
-  "version": "1.0.2",
+  "version": "1.0.5",
   "description": "This is the description of the plugin.",
   "strapi": {
     "name": "github-projects",
