@@ -24,7 +24,7 @@ Click [here](https://github.com/artcoded-net/strapi-plugin-github-projects/issue
 
 ## About us
 
-Artcoded is a developer & content creator brand, author of the Complete Strapi Course (to be soon released) and of free tutorials on Strapi (& more) on [YouTube](https://www.youtube.com/c/ArtcodedNet) and on [Artcoded.net](https://artcoded.net)
+I'm Jib, full-stack developer and instructor. Artcoded is my JS-teaching brand, under which I published the [Complete Strapi Course](https://artcoded.net/strapi), as well as free tutorials about Strapi and more on my [YouTube channel](https://www.youtube.com/c/ArtcodedNet) and [blog](https://artcoded.net)
 
 ## Disclaimer
 
