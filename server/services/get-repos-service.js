@@ -1,8 +1,8 @@
 "use strict";
 
 const { request } = require("@octokit/request");
-const axios = require("axios");
 const md = require("markdown-it")();
+const { getFetchClient } = require("@strapi/helper-plugin");
 
 module.exports = ({ strapi }) => ({
   getProjectForRepo: async (repo) => {
@@ -32,8 +32,21 @@ module.exports = ({ strapi }) => ({
       result.data.map(async (item) => {
         const { id, name, description, html_url, owner, default_branch } = item;
         const readmeUrl = `https://raw.githubusercontent.com/${owner.login}/${name}/${default_branch}/README.md`;
+
+        let readmeResponse;
+
+        try {
+          const client = getFetchClient();
+          const response = await client.get(readmeUrl);
+          console.log(response);
+          if (response) readmeResponse = response.data;
+        } catch (e) {
+          console.log(`Error occurred on item ${name}`);
+          console.log("Error", e);
+        }
+
         const longDescription = md
-          .render((await axios.get(readmeUrl)).data)
+          .render(readmeResponse)
           .replaceAll("\n", "<br/>");
         const repo = {
           id,

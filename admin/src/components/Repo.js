@@ -10,7 +10,7 @@ import {
   Flex,
   IconButton,
 } from "@strapi/design-system";
-import axios from "../utils/axiosInstance";
+import { useFetchClient } from "@strapi/helper-plugin";
 import { Pencil, Trash, Plus } from "@strapi/icons";
 import ConfirmationDialog from "./ConfirmationDialog";
 import BulkActions from "./BulkActions";
@@ -27,6 +27,9 @@ const Repo = () => {
   const [deletingRepo, setDeletingRepo] = useState(undefined);
   const { formatMessage } = useIntl();
 
+  const client = useFetchClient();
+  console.log("Initialized client");
+
   const showAlert = (alert) => {
     setAlert(alert);
     setTimeout(() => {
@@ -35,7 +38,7 @@ const Repo = () => {
   };
 
   const createProject = (repo) => {
-    axios
+    client
       .post("/github-projects/project", repo)
       .then((response) => {
         setRepos(
@@ -65,8 +68,8 @@ const Repo = () => {
 
   const deleteProject = (repo) => {
     const { projectId } = repo;
-    axios
-      .delete(`/github-projects/project/${projectId}`)
+    client
+      .del(`/github-projects/project/${projectId}`)
       .then((response) => {
         setRepos(
           repos.map((item) =>
@@ -94,13 +97,14 @@ const Repo = () => {
   };
 
   const createAll = (reposToBecomeProjects) => {
-    axios
+    client
       .post("/github-projects/projects", {
         repos: reposToBecomeProjects,
       })
       .then((response) => {
         setRepos(
           repos.map((repo) => {
+            //TODO: check if it needs conversion
             const relatedProjectJustCreated = response.data.find(
               (project) => project.repositoryId == repo.id
             );
@@ -129,8 +133,8 @@ const Repo = () => {
   };
 
   const deleteAll = (projectIds) => {
-    axios
-      .delete("/github-projects/projects", {
+    client
+      .del("/github-projects/projects", {
         params: {
           projectIds,
         },
@@ -168,7 +172,7 @@ const Repo = () => {
   useEffect(async () => {
     setLoading(true);
     // fetch data
-    axios
+    client
       .get("/github-projects/repos")
       .then((response) => setRepos(response.data))
       .catch((error) =>
