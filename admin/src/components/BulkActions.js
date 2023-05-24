@@ -1,5 +1,8 @@
 import React, { useState } from "react";
-import { Box, Flex, Typography, Button } from "@strapi/design-system";
+import { Box } from "@strapi/design-system/Box";
+import { Flex } from "@strapi/design-system/Flex";
+import { Typography } from "@strapi/design-system/Typography";
+import { Button } from "@strapi/design-system/Button";
 import ConfirmationDialog from "./ConfirmationDialog";
 
 const BulkActions = ({ selectedRepos, bulkCreateAction, bulkDeleteAction }) => {

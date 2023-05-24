@@ -1,7 +1,7 @@
 {
   "name": "@artcoded/strapi-plugin-github-projects",
-  "version": "1.1.0",
-  "description": "This is the description of the plugin.",
+  "version": "1.1.1",
+  "description": "A Strapi 4 plugin that allows to generate projects from Github repos.",
   "strapi": {
     "name": "github-projects",
     "description": "A Strapi 4 plugin that allows to generate projects from Github repos",
@@ -25,7 +25,7 @@
     }
   ],
   "engines": {
-    "node": ">=12.x.x <=16.x.x",
+    "node": ">=12.x.x <=18.x.x",
     "npm": ">=6.0.0"
   },
   "license": "MIT"

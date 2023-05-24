@@ -1,6 +1,7 @@
 import React from "react";
 import { useNotification } from "@strapi/helper-plugin";
-import { Button, Main } from "@strapi/design-system";
+import { Button } from "@strapi/design-system/Button";
+import { Main } from "@strapi/design-system/Main";
 
 const SettingsPage = () => {
   const toggleNotification = useNotification();

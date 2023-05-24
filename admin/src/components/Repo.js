@@ -1,15 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { Table, Thead, Tbody, Tr, Td, Th } from "@strapi/design-system/Table";
-import {
-  Box,
-  Typography,
-  BaseCheckbox,
-  Loader,
-  Alert,
-  Link,
-  Flex,
-  IconButton,
-} from "@strapi/design-system";
+import Box from "@strapi/design-system/Box";
+import Typography from "@strapi/design-system/Typography";
+import BaseCheckbox from "@strapi/design-system/BaseCheckbox";
+import Loader from "@strapi/design-system/Loader";
+import Alert from "@strapi/design-system/Alert";
+import Link from "@strapi/design-system/Link";
+import Flex from "@strapi/design-system/Flex";
+import IconButton from "@strapi/design-system/IconButton";
 import { useFetchClient } from "@strapi/helper-plugin";
 import { Pencil, Trash, Plus } from "@strapi/icons";
 import ConfirmationDialog from "./ConfirmationDialog";
